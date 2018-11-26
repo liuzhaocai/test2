@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/item_round_ll"
+        android:layout_width="325px"
+        android:layout_height="50px"
+        android:orientation="horizontal"
+        tools:background="@mipmap/mickey_round_item_bg">
+
+        <com.hopen.darts.views.CustomFontTextView
+            android:id="@+id/item_round_position_tv"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2.86"
+            android:gravity="center"
+            android:text="回 合 1"
+            android:textColor="@color/white" />
+
+        <com.hopen.darts.game.mickey.RoundViewMickey
+            android:id="@+id/item_round_score_rvm"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+    </LinearLayout>
+</LinearLayout>

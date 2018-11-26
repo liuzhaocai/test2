@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/player_single_parent_rl"
+        android:layout_width="220px"
+        android:layout_height="142px"
+        android:paddingBottom="16px"
+        android:paddingLeft="22px"
+        android:paddingRight="22px"
+        android:paddingTop="20px"
+        tools:background="@mipmap/game_play_bottom_player_single_bg">
+
+        <ImageView
+            android:id="@+id/player_single_head_iv"
+            android:layout_width="69.2px"
+            android:layout_height="82px"
+            android:scaleType="centerCrop"
+            tools:src="@mipmap/ic_launcher" />
+
+        <com.hopen.darts.views.CustomFontTextView
+            android:id="@+id/player_single_name_tv"
+            android:layout_width="70px"
+            android:layout_height="20px"
+            android:layout_below="@+id/player_single_head_iv"
+            android:layout_marginTop="3px"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:lines="1"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_minimum"
+            tools:text="玩家姓名" />
+
+        <com.hopen.darts.views.CustomFontTextView
+            android:id="@+id/player_single_score_tv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignBottom="@id/player_single_name_tv"
+            android:layout_marginLeft="10px"
+            android:layout_toRightOf="@id/player_single_head_iv"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="40px"
+            tools:text="200" />
+    </RelativeLayout>
+</LinearLayout>

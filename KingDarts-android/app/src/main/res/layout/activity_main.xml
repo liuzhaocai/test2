@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/main_bg"
+    tools:context="com.hopen.darts.ui.MainActivity">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:src="@mipmap/main_logo" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/game_series_ryc"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/dm700"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/dm140"
+        tools:listitem="@layout/item_main_game_series" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="@dimen/dm150"
+        android:layout_marginTop="@dimen/dm210"
+        android:background="@mipmap/bg_a" />
+
+    <FrameLayout
+        android:layout_width="@dimen/dm1284"
+        android:layout_height="@dimen/dm718"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="@dimen/dm150"
+        android:layout_marginTop="@dimen/dm190">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <FrameLayout
+                android:id="@+id/fl_left_son_games_view"
+                android:layout_width="@dimen/dm340"
+                android:layout_height="@dimen/dm540"
+                android:layout_gravity="center_vertical">
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rcy_son_games"
+                    android:layout_width="@dimen/dm282"
+                    android:layout_height="@dimen/dm530"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="@dimen/dm20"
+                    android:background="@mipmap/bg_c_yule"
+                    android:paddingBottom="@dimen/dm30"
+                    android:paddingTop="@dimen/dm26"
+                    tools:listitem="@layout/item_son_game_series" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:id="@+id/ll_model"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dm600"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="@dimen/dm60"
+                    android:orientation="vertical"
+                    android:visibility="gone"></LinearLayout>
+
+                <FrameLayout
+                    android:id="@+id/fl_main_desc_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@mipmap/bg_kuang">
+
+                    <ImageView
+                        android:id="@+id/iv_logo"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dm300"
+                        android:layout_marginLeft="@dimen/dm90"
+                        android:layout_marginRight="@dimen/dm90"
+                        android:layout_marginTop="@dimen/dm90"
+                        android:scaleType="fitCenter" />
+
+                    <LinearLayout
+                        android:id="@+id/ll_main_desc_text_container"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/dm230"
+                            android:layout_marginBottom="@dimen/dm70"
+                            android:layout_marginLeft="@dimen/dm80"
+                            android:layout_marginRight="@dimen/dm60"
+                            android:orientation="vertical">
+
+                            <com.hopen.darts.views.CustomFontTextView
+                                android:id="@+id/tv_game_name_title"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:ellipsize="end"
+                                android:gravity="center"
+                                android:lines="1"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/text_size_title"
+                                app:font_type="fzdhtjw"
+                                app:stroke_color="@color/black"
+                                app:stroke_width="@dimen/dm2"
+                                tools:text="游戏介绍" />
+
+                            <com.hopen.darts.views.CustomFontTextView
+                                android:id="@+id/tv_game_name_desc"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/dm200"
+                                android:ellipsize="end"
+                                android:gravity="center_vertical"
+                                android:lineSpacingExtra="@dimen/min_space"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/text_size_desc"
+                                app:font_type="fzdhtjw"
+                                app:stroke_color="@color/black"
+                                app:stroke_width="@dimen/dm2"
+                                tools:text="游戏描述" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </FrameLayout>
+            </FrameLayout>
+        </LinearLayout>
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_bottom_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/bottom_bar_margin_bottom">
+
+        <include layout="@layout/view_bottom_all_btn_view" />
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.hopen.darts.views.CustomFontTextView
+        android:id="@+id/content_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:minWidth="110px"
+        android:textColor="@color/theme_color"
+        android:textSize="60px"
+        app:stroke_color="@color/white"
+        app:stroke_width="3px"
+        tools:text="P8" />
+
+    <ImageView
+        android:id="@+id/times_iv"
+        android:layout_width="50px"
+        android:layout_height="50px"
+        android:layout_gravity="center"
+        android:scaleType="fitCenter"
+        tools:src="@mipmap/mickey_round_item_three_times" />
+</FrameLayout>

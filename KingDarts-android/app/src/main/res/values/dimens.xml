@@ -1,0 +1,56 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+
+    <!-- 边距相关-->
+    <dimen name="activity_horizontal_spacing_tiny">5dp</dimen>
+    <dimen name="activity_horizontal_spacing_small">8dp</dimen>
+    <dimen name="activity_horizontal_spacing">12dp</dimen>
+    <dimen name="activity_horizontal_spacing_big">20dp</dimen>
+    <dimen name="activity_horizontal_spacing_large">27dp</dimen>
+    <dimen name="activity_vertical_spacing_tiny">3dp</dimen>
+    <dimen name="activity_vertical_spacing_small">6dp</dimen>
+    <dimen name="activity_vertical_spacing">10dp</dimen>
+    <dimen name="activity_vertical_spacing_big">14dp</dimen>
+    <dimen name="activity_vertical_spacing_large">18dp</dimen>
+
+    <!-- item相关-->
+    <dimen name="item_height">46dp</dimen>
+    <dimen name="item_height_game">40dp</dimen>
+    <dimen name="item_width_game">100dp</dimen>
+
+    <!-- 按钮相关-->
+    <dimen name="button_height">43dp</dimen>
+
+    <!-- 图标相关-->
+    <dimen name="icon_size">25dp</dimen>
+    <dimen name="dot_size">6dp</dimen>
+    <dimen name="dot_radius">3dp</dimen>
+    <dimen name="player_in_group_radius">21px</dimen>
+
+    <!-- dialog相关-->
+    <dimen name="dialog_radius">12dp</dimen>
+
+    <!-- 字体大小-->
+    <dimen name="text_size_take_photo_title">160px</dimen>
+    <dimen name="text_size_title">40px</dimen>
+    <dimen name="text_size_huge">36px</dimen>
+    <dimen name="text_size_large">34px</dimen>
+    <dimen name="text_size_big">32px</dimen>
+    <dimen name="text_size_normal">30px</dimen>
+    <dimen name="text_size_desc">25px</dimen>
+    <dimen name="text_size_small">24px</dimen>
+    <dimen name="text_size_tiny">20px</dimen>
+    <dimen name="text_size_minimum">16px</dimen>
+    <dimen name="game_gfs_top">10px</dimen>
+    <dimen name="game_gfs_left">25px</dimen>
+
+    <!--bottom_view-->
+    <dimen name="bottom_bar_margin_bottom">10px</dimen>
+    <dimen name="bottom_done_margin_right">246px</dimen>
+    <dimen name="bottom_cancel_margin_right">600px</dimen>
+    <dimen name="system_info_space">36px</dimen>
+    <dimen name="min_space">10px</dimen>
+
+</resources>

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl_player_normal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/ll_bottom_player"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dm246"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/dm58"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal">
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_normal_take_photo"
+        android:layout_width="@dimen/dm512"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/ll_bottom_player"
+        android:layout_centerHorizontal="true"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="@dimen/dm512"
+            android:layout_height="@dimen/dm520"
+            android:layout_alignParentBottom="true">
+            <LinearLayout
+                android:layout_width="@dimen/dm512"
+                android:layout_height="@dimen/dm520"
+                android:background="@mipmap/big_shexiang"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="@dimen/dm160"
+                    android:layout_height="@dimen/dm50"
+                    android:layout_marginLeft="@dimen/dm16"
+                    android:layout_marginTop="@dimen/dm80"
+                    android:background="@mipmap/icon_take_photo" />
+
+                <FrameLayout
+                    android:id="@+id/fl_normal_take_photos"
+                    android:layout_width="@dimen/dm350"
+                    android:layout_height="@dimen/dm292"
+                    android:layout_marginTop="@dimen/dm20" />
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="@dimen/dm52"
+                android:layout_height="@dimen/dm52"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="@dimen/dm76"
+                android:background="@mipmap/camera_small" />
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/iv_normal_delay_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/dm190"
+            android:src="@mipmap/second_5" />
+    </RelativeLayout>
+</RelativeLayout>

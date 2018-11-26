@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/bg_loading"
+    tools:context=".ui.WaitLoadingActivity">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:src="@mipmap/main_logo" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:orientation="vertical">
+
+        <ImageView
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/dm440"
+            android:src="@mipmap/bg_loading_logo" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dm440"
+            android:layout_gravity="center_horizontal">
+
+            <FrameLayout
+                android:layout_width="@dimen/dm500"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal">
+                <com.hopen.darts.views.CustomFontTextView
+                    android:id="@+id/tv_loading_done"
+                    android:visibility="gone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/dm40"
+                    android:layout_marginBottom="@dimen/dm20"
+                    android:letterSpacing="0.13"
+                    android:text="@string/loading_done"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/dm70"
+                    app:font_type="fzltchw"
+                    app:stroke_color="@color/theme_color"
+                    app:stroke_width="@dimen/dm6" />
+            </FrameLayout>
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="@dimen/dm30">
+
+                <com.hopen.darts.views.CustomFontTextView
+                    android:id="@+id/tv_loading"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dm60"
+                    android:letterSpacing="0.13"
+                    android:text="loading..."
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/dm70"
+                    app:font_type="fzltchw"
+                    android:layout_gravity="center_horizontal"
+                    app:stroke_color="@color/theme_color"
+                    app:stroke_width="@dimen/dm6" />
+                <com.hopen.darts.views.CustomFontTextView
+                    android:id="@+id/tv_err_msg"
+                    android:visibility="gone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dm65"
+                    android:letterSpacing="0.13"
+                    android:text="更新失败"
+                    android:textColor="@color/white"
+                    android:layout_marginRight="@dimen/dm30"
+                    android:textSize="@dimen/dm60"
+                    app:font_type="fzltchw"
+                    android:layout_gravity="center_horizontal"
+                    app:stroke_color="@color/theme_color"
+                    app:stroke_width="@dimen/dm6" />
+            </FrameLayout>
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dm30"
+            android:layout_gravity="center_horizontal"
+            android:background="@mipmap/bg_loading_nor">
+
+            <ProgressBar
+                android:id="@+id/pb_loading"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="@dimen/dm1176"
+                android:layout_height="@dimen/dm78"
+                android:max="100"
+                android:progress="0"
+                android:progressDrawable="@drawable/bg_progress_loading" />
+        </FrameLayout>
+    </LinearLayout>
+</RelativeLayout>

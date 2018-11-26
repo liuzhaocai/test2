@@ -1,0 +1,14 @@
+{
+  "AddBlood" : "blood/",
+  "Boxing" : "boxing/",
+  "End" : "KO/",
+  "LevelFour" : "第四段/",
+  "LevelOne" : "第一段/",
+  "LevelThree" : "第三段/",
+  "LevelTwo" : "第二段/",
+  "Man" : "man/",
+  "ManBeaten" : "man_beaten/",
+  "Start" : "拳击动画/",
+  "Woman" : "woman/",
+  "WomanBeaten" : "woman_beaten/"
+}

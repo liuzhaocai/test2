@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <!-- 主题颜色-->
+    <color name="theme_color">#0093d9</color>
+    <color name="theme_press">#7acdf5</color>
+    <color name="theme_orange">#fa8c35</color>
+    <color name="window_bg">#F2F2F2</color>
+    <color name="window_bg_blue">#EFF2F5</color>
+    <color name="window_bg_dark">#DDDDDD</color>
+    <color name="shadow_bg">#90000000</color>
+    <color name="shadow_light_bg">#50000000</color>
+    <color name="shadow_white">#FF7F7F7F</color>
+    <color name="shadow_dark_bg">#99000000</color>
+    <color name="line">#DDDDDD</color>
+    <color name="line_dark">#888888</color>
+    <color name="disable">#BFBFBF</color>
+    <color name="white">#FFFFFF</color>
+    <color name="white_press">#CCEEEEEE</color>
+    <color name="white_tran">#88FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="transparent">#00000000</color>
+    <color name="red">#ff0000</color>
+
+    <!-- 字体颜色-->
+    <color name="text_black">#333333</color>
+    <color name="text_gray_dark">#666666</color>
+    <color name="text_gray">#999999</color>
+    <color name="text_gray_light">#BBBBBB</color>
+    <color name="text_red">#ff6016</color>
+    <color name="text_link">#0000CB</color>
+    <color name="text_white_80">#80FFFFFF</color>
+    <color name="bg_progress">#233339</color>
+    <color name="bg_progress_line">#34333a</color>
+
+    <!--游戏结果排名颜色-->
+    <color name="game_result_red">#c15c37</color>
+    <color name="game_result_grey">#9a9a9a</color>
+    <color name="game_result_green">#3dcf52</color>
+    <color name="game_result_purple">#a87bdc</color>
+    <color name="game_result_yellow">#d4ba39</color>
+
+</resources>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.hopen.darts.views.GameCombatHealthView
+        android:id="@+id/health_hv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        app:current_health="15"
+        app:total_health="15" />
+
+    <com.hopen.darts.utils.Animation.AnimationView
+        android:id="@+id/body_av"
+        android:layout_width="508px"
+        android:layout_height="514px"
+        android:layout_below="@id/health_hv"
+        android:layout_centerHorizontal="true"
+        android:scaleType="center" />
+
+    <com.hopen.darts.utils.Animation.AnimationView
+        android:id="@+id/cure_av"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/body_av"
+        android:layout_alignLeft="@id/body_av"
+        android:layout_alignRight="@id/body_av"
+        android:layout_alignTop="@id/body_av"
+        android:scaleType="center" />
+
+    <TextView
+        android:id="@+id/score1_tv"
+        android:layout_width="88px"
+        android:layout_height="88px"
+        android:layout_alignTop="@id/body_av"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20px"
+        android:background="@mipmap/combat_center_fighter_score_bg"
+        android:gravity="center"
+        android:paddingBottom="5px"
+        android:textColor="#163267"
+        android:textSize="@dimen/text_size_large"
+        tools:text="20" />
+
+    <TextView
+        android:id="@+id/score2_tv"
+        android:layout_width="88px"
+        android:layout_height="88px"
+        android:layout_alignLeft="@id/body_av"
+        android:layout_marginLeft="100px"
+        android:layout_marginTop="170px"
+        android:background="@mipmap/combat_center_fighter_score_bg"
+        android:gravity="center"
+        android:paddingBottom="5px"
+        android:textColor="#163267"
+        android:textSize="@dimen/text_size_large"
+        tools:text="20" />
+
+    <TextView
+        android:id="@+id/score3_tv"
+        android:layout_width="88px"
+        android:layout_height="88px"
+        android:layout_alignRight="@id/body_av"
+        android:layout_marginRight="118px"
+        android:layout_marginTop="190px"
+        android:background="@mipmap/combat_center_fighter_score_bg"
+        android:gravity="center"
+        android:paddingBottom="5px"
+        android:textColor="#163267"
+        android:textSize="@dimen/text_size_large"
+        tools:text="20" />
+</RelativeLayout>

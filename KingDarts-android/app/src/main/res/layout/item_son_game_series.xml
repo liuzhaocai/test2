@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal">
+
+    <FrameLayout
+        android:layout_width="@dimen/dm280"
+        android:layout_height="@dimen/dm80">
+
+        <FrameLayout
+            android:id="@+id/fl_bg"
+            android:layout_width="@dimen/dm230"
+            android:layout_height="@dimen/dm64"
+            android:layout_gravity="center"
+            android:paddingBottom="@dimen/dm4"
+            android:background="@drawable/sel_game_son_item">
+
+            <com.hopen.darts.views.CustomFontTextView
+                android:id="@+id/tv_game_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_normal"
+                app:font_type="fzdhtjw"
+                app:stroke_color="@color/black"
+                app:stroke_width="@dimen/dm2"
+                tools:text="125" />
+        </FrameLayout>
+    </FrameLayout>
+</LinearLayout>

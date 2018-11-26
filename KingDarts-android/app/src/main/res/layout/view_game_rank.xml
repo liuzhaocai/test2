@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tool="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:layout_marginLeft="@dimen/dm5"
+        android:layout_marginRight="@dimen/dm5"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dm410">
+
+            <ImageView
+                android:id="@+id/iv_icon_crown"
+                android:layout_width="@dimen/dm98"
+                android:layout_height="@dimen/dm98"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/dm5"
+                android:background="@mipmap/icon_game_result_crown" />
+
+            <ImageView
+                android:id="@+id/iv_game_result_icon"
+                android:layout_width="@dimen/dm200"
+                android:layout_height="@dimen/dm270"
+                android:layout_marginTop="@dimen/dm98"
+                android:background="@mipmap/icon_game_result_red" />
+
+            <ImageView
+                android:id="@+id/iv_user_head"
+                android:layout_width="@dimen/dm166"
+                android:layout_height="@dimen/dm138"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/dm164"
+                android:visibility="invisible" />
+
+            <com.hopen.darts.views.CustomFontTextView
+                android:id="@+id/tv_user_rank"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/dm129"
+                android:letterSpacing="0.1"
+                android:text="第一名"
+                android:textColor="@color/white"
+                android:textSize="@dimen/dm24"
+                app:font_type="fzcchjw"
+                app:stroke_color="@color/black"
+                app:stroke_width="@dimen/dm1" />
+
+            <com.hopen.darts.views.CustomFontTextView
+                android:id="@+id/tv_user_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/dm303"
+                android:letterSpacing="0.1"
+                android:text="PLAYER1"
+                android:textColor="@color/white"
+                android:textSize="@dimen/dm24"
+                app:font_type="fzcchjw"
+                app:stroke_color="@color/black"
+                app:stroke_width="@dimen/dm1" />
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/tv_dart_number"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dm35"
+            android:gravity="center"
+            android:textColor="@color/text_red"
+            android:textSize="@dimen/dm32"
+            tool:text="100" />
+
+        <LinearLayout
+            android:id="@+id/ll_pp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_ppr"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dm38"
+                android:layout_marginTop="@dimen/dm20"
+                android:gravity="center"
+                android:textColor="@color/text_red"
+                android:textSize="@dimen/dm32"
+                tool:text="100" />
+
+            <TextView
+                android:id="@+id/tv_ppd"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dm38"
+                android:layout_marginTop="@dimen/dm20"
+                android:gravity="center"
+                android:textColor="@color/text_red"
+                android:textSize="@dimen/dm32"
+                tool:text="100" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:visibility="gone"
+            android:id="@+id/ll_mp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_mpr"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dm38"
+                android:layout_marginTop="@dimen/dm30"
+                android:gravity="center"
+                android:textColor="@color/text_red"
+                android:textSize="@dimen/dm32"
+                android:layout_marginBottom="@dimen/dm10"
+                tool:text="100" />
+        </LinearLayout>
+
+        <com.hopen.darts.views.TextViewBorder
+            android:id="@+id/tv_total_points"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dm50"
+            android:layout_marginTop="@dimen/dm16"
+            android:fontFamily="w"
+            android:gravity="center"
+            android:paddingBottom="@dimen/dm2"
+            android:paddingLeft="@dimen/dm36"
+            android:paddingRight="@dimen/dm36"
+            android:textColor="@color/text_red"
+            android:textSize="@dimen/dm32"
+            app:borderColor="@color/text_red"
+            tool:text="100" />
+    </LinearLayout>
+</FrameLayout>

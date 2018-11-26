@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipChildren="false"
+    android:clipToPadding="false">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="130px">
+
+        <pl.droidsonroids.gif.GifImageView
+            android:id="@+id/boss_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="830px"
+            android:layout_centerInParent="true"
+            android:src="@drawable/rich_boss" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="115px"
+            android:paddingRight="70px">
+
+            <ImageView
+                android:id="@+id/boss_head_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/rich_boss_head" />
+
+            <com.hopen.darts.views.GameRichHealthView
+                android:id="@+id/health_hv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/boss_head_iv"
+                android:layout_marginLeft="-27px"
+                android:layout_marginTop="18px"
+                android:layout_toRightOf="@id/boss_head_iv"
+                app:percent="96" />
+
+            <com.hopen.darts.views.CustomFontTextView
+                android:id="@+id/refresh_time_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/health_hv"
+                android:layout_toRightOf="@id/boss_head_iv"
+                android:drawableLeft="@mipmap/rich_refresh_time"
+                android:gravity="center_vertical"
+                android:text="剩余时间：00:00:00"
+                android:textColor="@color/white"
+                android:textSize="18px" />
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>

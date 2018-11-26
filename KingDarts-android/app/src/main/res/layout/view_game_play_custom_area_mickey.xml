@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ListView
+        android:id="@+id/score_area_lv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="230px"
+        android:layout_marginLeft="473px"
+        android:layout_marginRight="468px"
+        android:layout_marginTop="200px"
+        android:divider="@color/transparent"
+        android:dividerHeight="3px"
+        tools:listitem="@layout/item_game_play_custom_area_mickey_first" />
+</LinearLayout>

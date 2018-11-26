@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/page_rl"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipChildren="false"
+    android:clipToPadding="false"
+    tools:background="@mipmap/high_page_bg"
+    tools:context="com.hopen.darts.ui.GamePlayActivity">
+
+    <ImageView
+        android:id="@+id/top_logo_iv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="6px"
+        tools:src="@mipmap/high_top_logo" />
+
+    <FrameLayout
+        android:id="@+id/custom_area_fl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <LinearLayout
+        android:id="@+id/player_ll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="27px"
+        android:layout_marginTop="16px"
+        android:gravity="center"
+        android:orientation="horizontal"
+        tools:background="@mipmap/high_player_bg">
+
+        <RelativeLayout
+            android:layout_width="120px"
+            android:layout_height="160px">
+
+            <ImageView
+                android:id="@+id/player_head_iv"
+                android:layout_width="100px"
+                android:layout_height="140px"
+                android:layout_centerInParent="true"
+                android:scaleType="centerCrop"
+                tools:src="@mipmap/ic_launcher" />
+
+            <com.hopen.darts.views.CustomFontTextView
+                android:id="@+id/player_name_tv"
+                android:layout_width="100px"
+                android:layout_height="30px"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="14px"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:lines="1"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_tiny"
+                tools:text="玩家姓名" />
+
+            <View
+                android:id="@+id/player_head_bg"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:background="@mipmap/high_player_head_bg" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="192px"
+            android:layout_height="168px"
+            android:orientation="vertical">
+
+            <com.hopen.darts.views.CustomFontTextView
+                android:id="@+id/player_info_item1_tv"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:paddingLeft="2px"
+                android:textColor="@color/white"
+                tools:background="@mipmap/high_player_info_item_bg"
+                tools:text="玩家姓名" />
+
+            <com.hopen.darts.views.CustomFontTextView
+                android:id="@+id/player_info_item2_tv"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:paddingLeft="2px"
+                android:textColor="@color/white"
+                tools:background="@mipmap/high_player_info_item_bg"
+                tools:text="PPR:0.00" />
+
+            <com.hopen.darts.views.CustomFontTextView
+                android:id="@+id/player_info_item3_tv"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:paddingLeft="2px"
+                android:textColor="@color/white"
+                tools:background="@mipmap/high_player_info_item_bg"
+                tools:text="PPD:0.00" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/round_ll"
+        android:layout_width="386px"
+        android:layout_height="554px"
+        android:layout_below="@id/player_ll"
+        android:layout_marginLeft="7px"
+        android:layout_marginTop="20px"
+        android:orientation="vertical"
+        android:paddingBottom="50px"
+        android:paddingLeft="31px"
+        android:paddingRight="30px"
+        android:paddingTop="32px"
+        tools:background="@mipmap/high_round_bg">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50px">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50px"
+                android:orientation="horizontal">
+
+                <com.hopen.darts.views.CustomFontTextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2.86"
+                    android:gravity="center"
+                    android:text="回  合"
+                    android:textColor="@color/white" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1" />
+            </LinearLayout>
+
+            <com.hopen.darts.views.CustomFontTextView
+                android:id="@+id/round_num_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:gravity="center"
+                android:paddingRight="8px"
+                android:textColor="@color/white"
+                tools:text="20/20" />
+        </RelativeLayout>
+
+        <ListView
+            android:id="@+id/round_lv"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:divider="@null"
+            android:scrollbars="none"
+            tools:listitem="@layout/item_round" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/live_rl"
+        android:layout_width="480px"
+        android:layout_height="520px"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="6px"
+        android:layout_marginTop="83px"
+        tools:background="@mipmap/high_live_bg">
+
+        <FrameLayout
+            android:id="@+id/live_fl"
+            android:layout_width="347px"
+            android:layout_height="289px"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="79px"
+            android:layout_marginLeft="82px" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="82px"
+            android:paddingLeft="28px"
+            android:src="@mipmap/camera_big" />
+    </RelativeLayout>
+
+    <com.hopen.darts.views.DartsView
+        android:id="@+id/darts_dv"
+        android:layout_width="316px"
+        android:layout_height="236px"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/live_rl"
+        android:layout_marginRight="70px"
+        android:layout_marginTop="-20px"
+        android:background="@mipmap/high_darts_bg"
+        android:paddingBottom="8px"
+        android:paddingLeft="16px"
+        android:paddingRight="16px"
+        android:paddingTop="8px" />
+
+    <com.hopen.darts.views.GamePlayBottomView
+        android:id="@+id/players_bv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="8px"
+        tools:background="@mipmap/high_bottom_bg" />
+
+    <RelativeLayout
+        android:id="@+id/online_over_rl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:visibility="gone"
+        tools:background="@mipmap/game_play_online_winner">
+
+        <LinearLayout
+            android:id="@+id/online_over_player_ll"
+            android:layout_width="278px"
+            android:layout_height="346px"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="253px"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:paddingLeft="23px"
+            android:paddingRight="25px"
+            tools:background="@mipmap/icon_game_result_red">
+
+            <ImageView
+                android:id="@+id/online_over_player_head_iv"
+                android:layout_width="match_parent"
+                android:layout_height="177px"
+                android:layout_marginTop="83px"
+                tools:src="@mipmap/icon_head_default" />
+
+            <com.hopen.darts.views.CustomFontTextView
+                android:id="@+id/online_over_player_name_tv"
+                android:layout_width="match_parent"
+                android:layout_height="45px"
+                android:layout_marginLeft="11px"
+                android:layout_marginRight="11px"
+                android:gravity="center"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                tools:text="player1" />
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

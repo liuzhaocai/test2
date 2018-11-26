@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/bg_loading"
+    tools:context=".ui.VideoVSWaitActivity">
+    <ImageView
+        android:layout_width="@dimen/dm710"
+        android:layout_height="@dimen/dm220"
+        android:layout_marginTop="@dimen/dm10"
+        android:src="@mipmap/logo_game"
+        android:layout_centerHorizontal="true"/>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingBottom="@dimen/dm40"
+        >
+       <ImageView
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:src="@mipmap/icon_net_left"/>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dm85"
+            android:layout_marginRight="@dimen/dm85"
+            android:src="@mipmap/icon_net_vs"/>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/icon_net_right"/>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/ll_bottom_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/bottom_bar_margin_bottom">
+
+        <include layout="@layout/view_bottom_all_btn_view" />
+    </LinearLayout>
+</RelativeLayout>

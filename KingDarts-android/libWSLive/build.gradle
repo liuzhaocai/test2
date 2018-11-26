@@ -1,0 +1,40 @@
+apply plugin: 'com.android.library'
+
+group='com.github.WangShuo1143368701'
+
+android {
+    compileSdkVersion 27
+
+    defaultConfig {
+        minSdkVersion 19
+        targetSdkVersion 22
+    }
+
+    lintOptions {
+        abortOnError false
+        checkReleaseBuilds false
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        debug {
+        }
+        sourceSets {
+            main { jni.srcDirs = [] }
+        }
+    }
+    sourceSets {
+        main {
+            jniLibs.srcDirs  'src/main/libs'
+            jni.srcDirs = []
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile 'jp.co.cyberagent.android.gpuimage:gpuimage-library:1.4.1'
+}

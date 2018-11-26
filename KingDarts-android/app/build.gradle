@@ -1,0 +1,97 @@
+apply plugin: 'com.android.application'
+
+/**
+ * 使用properties文件下配置的参数
+ */
+Properties properties = new Properties()
+properties.load(project.rootProject.file('./keystore/keystore.properties').newDataInputStream())
+
+android {
+    compileSdkVersion 27
+    defaultConfig {
+        applicationId "com.hopen.darts"
+        minSdkVersion 19
+        targetSdkVersion 22
+        versionCode 9
+        versionName "1.1.2"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    signingConfigs {
+        release {
+            storeFile file(properties.getProperty("key_store_path"))
+            storePassword properties.getProperty("key_store_password")
+            keyAlias properties.getProperty("key_alias_name")
+            keyPassword properties.getProperty("key_alias_password")
+        }
+        debug {
+            storeFile file(properties.getProperty("key_store_path"))
+            storePassword properties.getProperty("key_store_password")
+            keyAlias properties.getProperty("key_alias_name")
+            keyPassword properties.getProperty("key_alias_password")
+        }
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
+        }
+        debug {
+            signingConfig signingConfigs.debug
+        }
+        sourceSets {
+            main { jni.srcDirs = [] }
+        }
+    }
+    applicationVariants.all { variant ->
+        def appPackageArray = variant.applicationId.split("\\.")//包名分割数组
+        def appName = appPackageArray[appPackageArray.length > 0 ? appPackageArray.length - 1 : 0]//app名称
+        def versionName = 'v' + variant.getVersionName()//版本名称
+        def versionCode = 'c' + variant.getVersionCode()//版本号
+        def buildTime = new Date().format("yyyyMMddHHmmss", TimeZone.getTimeZone("GMT+08:00"))//打包时间
+        def buildType = variant.buildType.name//debug打包还是 release方式打包
+        buildTime = buildType == 'release' ? buildTime : ''
+        //gradle新版定义文件名用法
+        variant.outputs.all {
+            // 输出apk名称为appName_versionName_versionCode_releaseTime_rd.apk
+            outputFileName = appName + '_' + versionName + '_' + versionCode + '_' + buildTime + '_' + buildType + '.apk'
+        }
+    }
+    allprojects {
+        repositories {
+            jcenter()
+            flatDir {
+                dirs 'libs'
+            }
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'com.android.support:appcompat-v7:27.1.1'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.0'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+    compile 'com.github.promeg:tinypinyin:2.0.3'
+    compile 'com.google.zxing:core:3.3.0'
+    compile 'com.github.bumptech.glide:glide:3.7.0'
+    compile 'com.squareup.okhttp3:okhttp:3.10.0'
+    compile 'com.alibaba:fastjson:1.2.38'
+    compile 'com.jakewharton:butterknife:8.8.1'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
+    compile 'io.netty:netty-all:4.0.35.Final'
+    compile 'com.makeramen:roundedimageview:2.3.0'
+    implementation 'com.android.support:recyclerview-v7:27.1.1'
+    implementation 'com.orhanobut:logger:2.2.0'
+    implementation(name: 'AlivcPlayer-3.4.6', ext: 'aar')
+    implementation(name: 'AlivcReporter-1.2', ext: 'aar')
+    implementation project(':libWSLive')
+    compile 'com.tencent.bugly:crashreport_upgrade:latest.release'//其中latest.release指代最新版本号，也可以指定明确的版本号，例如1.2.0
+    compile 'com.tencent.bugly:nativecrashreport:latest.release' //其中latest.release指代最新版本号，也可以指定明确的版本号，例如2.2.0
+    compile 'pl.droidsonroids.gif:android-gif-drawable:1.2.15'
+    implementation 'com.liulishuo.okdownload:okdownload:1.0.4'
+    implementation 'com.liulishuo.okdownload:sqlite:1.0.4'
+    implementation 'com.liulishuo.okdownload:okhttp:1.0.4'
+}

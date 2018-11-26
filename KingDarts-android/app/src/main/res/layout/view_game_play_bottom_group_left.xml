@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:paddingLeft="26px"
+    android:paddingRight="16px"
+    tools:background="@mipmap/high_bottom_item_group_3v3_left_bg">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/player_group_left_head_3rd_iv"
+            style="@style/PlayerInGroupStyle"
+            android:layout_marginLeft="120px"
+            app:riv_corner_radius="@dimen/player_in_group_radius"
+            tools:background="@mipmap/game_play_bottom_player_group_3v3_left_1st_bg"
+            tools:src="@mipmap/ic_launcher" />
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/player_group_left_head_2nd_iv"
+            style="@style/PlayerInGroupStyle"
+            android:layout_marginLeft="60px"
+            app:riv_corner_radius="@dimen/player_in_group_radius"
+            tools:background="@mipmap/game_play_bottom_player_group_3v3_left_1st_bg"
+            tools:src="@mipmap/ic_launcher" />
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/player_group_left_head_1st_iv"
+            style="@style/PlayerInGroupStyle"
+            app:riv_corner_radius="@dimen/player_in_group_radius"
+            tools:background="@mipmap/game_play_bottom_player_group_3v3_left_1st_bg"
+            tools:src="@mipmap/ic_launcher" />
+    </RelativeLayout>
+
+    <com.hopen.darts.views.CustomFontTextView
+        android:id="@+id/player_group_left_score_tv"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:lines="1"
+        android:textColor="#48f4f4"
+        android:textSize="60px"
+        app:stroke_color="#000d21"
+        app:stroke_width="2px"
+        tools:text="200" />
+</LinearLayout>

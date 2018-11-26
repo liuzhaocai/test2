@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/bg_game_result"
+    tools:context=".ui.GameResultActivity">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:src="@mipmap/main_logo" />
+
+    <com.hopen.darts.views.CustomFontTextView
+        android:id="@+id/tv_rest_money"
+        android:layout_width="@dimen/dm480"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:layout_marginTop="@dimen/dm180"
+        android:letterSpacing="0.1"
+        android:text="包机剩余金币：123456"
+        android:textColor="@color/white"
+        android:textSize="@dimen/dm32"
+        app:font_type="fzltchw"
+        app:stroke_color="@color/theme_color"
+        app:stroke_width="@dimen/dm2" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dm659"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/dm15"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="@dimen/dm335"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/dm110"
+            android:layout_marginTop="@dimen/dm10"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="@dimen/dm335"
+                android:layout_height="@dimen/dm226"
+                android:layout_marginTop="@dimen/dm100"
+                android:background="@mipmap/icon_game_result_vs" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dm83"
+                android:background="@mipmap/icon_game_result_c" />
+
+            <LinearLayout
+                android:id="@+id/ll_pp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dm20"
+                    android:background="@mipmap/icon_game_result_d" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dm20"
+                    android:background="@mipmap/icon_game_result_e" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_mp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dm10"
+                    android:layout_marginTop="@dimen/dm30"
+                    android:background="@mipmap/icon_mpr" />
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dm20"
+                android:background="@mipmap/icon_game_result_f" />
+        </LinearLayout>
+
+        <FrameLayout
+            android:id="@+id/fl_rank"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/dm120"
+            android:paddingRight="@dimen/dm100"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:id="@+id/ll_center"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:paddingRight="@dimen/dm60" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/fl_vs"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/dm60"
+            android:paddingRight="@dimen/dm100"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingRight="@dimen/dm60"
+                android:weightSum="2">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal">
+
+                    <LinearLayout
+                        android:id="@+id/ll_left_player"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center_horizontal"
+                        android:orientation="horizontal" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="right"
+                android:paddingLeft="@dimen/dm60"
+                android:weightSum="2">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal">
+
+                    <LinearLayout
+                        android:id="@+id/ll_right_player"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center_horizontal"
+                        android:orientation="horizontal" />
+                </LinearLayout>
+            </LinearLayout>
+
+        </FrameLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal|bottom"
+        android:background="@mipmap/main_bottom_bar_bg"
+        android:paddingLeft="@dimen/dm180"
+        android:paddingRight="@dimen/dm180"
+        android:paddingTop="@dimen/dm10">
+
+        <ImageView
+            android:id="@+id/iv_cancel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:src="@mipmap/btn_cancel" />
+
+        <ImageView
+            android:id="@+id/iv_done"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:src="@mipmap/btn_done" />
+    </LinearLayout>
+</FrameLayout>

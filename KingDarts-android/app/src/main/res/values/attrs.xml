@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- CustomFontTextView字体-->
+    <declare-styleable name="CustomFontTextView">
+        <!-- 此属性已舍弃，为了兼容之前的代码，所以不删，但是此属性已经没有任何效果了
+             {@deprecated This attribute is deprecated. }-->
+        <attr name="font_type">
+            <!-- 方正超粗黑简体-->
+            <enum name="fzcchjw" value="0" />
+            <!-- 方正大黑简体-->
+            <enum name="fzdhtjw" value="1" />
+            <!-- 方正兰亭粗黑体-->
+            <enum name="fzltchw" value="2" />
+        </attr>
+        <attr name="stroke_color" format="color" />
+        <attr name="stroke_width" format="dimension" />
+    </declare-styleable>
+    <declare-styleable name="TextViewBorder">
+        <attr name="borderColor" format="color" />
+    </declare-styleable>
+    <declare-styleable name="GameRichHealthView">
+        <attr name="percent" format="integer" />
+    </declare-styleable>
+    <declare-styleable name="GameCombatHealthView">
+        <attr name="total_health" format="integer" />
+        <attr name="current_health" format="integer" />
+    </declare-styleable>
+</resources>

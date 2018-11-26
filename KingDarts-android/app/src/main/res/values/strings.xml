@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">ANewDarts</string>
+
+    <string name="take_photos">拍照中...</string>
+    <string name="app_dart_title">飞镖盘区分说明</string>
+    <string name="app_dart_desc">\t\t单倍区为该区域分值X1，双倍区为该区域分值X2，三倍区为该区域分值X3。内外牛眼，50/50或者50/25。此分值只作为01系列、米老鼠、高分赛、全民大富豪、拳王格斗、21点、打气球参考分数。红心王请看玩法详细规则。</string>
+    <string name="setting_about_title">关 于</string>
+    <string name="game_router_title">游 戏 规 则</string>
+    <string name="loading_done">加载完成</string>
+</resources>

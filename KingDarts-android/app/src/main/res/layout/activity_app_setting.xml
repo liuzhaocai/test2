@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/main_bg"
+    tools:context=".ui.AppSettingActivity">
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:src="@mipmap/main_logo" />
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/game_series_ryc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/dm50"
+        android:layout_gravity="center"
+        tools:listitem="@layout/adapter_game_model" />
+    <LinearLayout
+        android:id="@+id/ll_bottom_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal|bottom"
+        android:layout_marginBottom="@dimen/bottom_bar_margin_bottom">
+        <include layout="@layout/view_bottom_all_btn_view" />
+    </LinearLayout>
+</FrameLayout>
